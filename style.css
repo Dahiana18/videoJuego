@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.imagen_fondo {
+    background-image: url(./img/Diseño-sin-título.gif);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+        
+}
+
+.titulo img {
+    display: inline-block;
+    align-items: center;
+    background-color: transparent;
+    width: 150vh;
+    margin-top: 150px;
+}
+
+
+.credits {
+    display: flex;
+    justify-content: center;
+    position:inherit;
+}
+
+.credits img {
+    align-items: center;
+    background-color: transparent;
+    width: 300px;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+.boton_inicio {
+    width: 200px;
+    height: 200px;
+    bottom: 0.1ch;
+    left: 50%;
+    opacity: 1;
+    transform: translateX(-50%);
+    transition: opacity 3.0 ease-in-out;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+}
+
+.boton_inicio:hover {
+    opacity: 0.5;
+    filter: drop-shadow(5px 5px 5px #fff);
+    transition: 1s;
+}
+
+.boton_inicio {
+    animation-duration: 1s;
+    animation-name: sombra;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes sombra{
+    from{
+        width: 200px;
+        height: 200px;
+
+    }
+    to {
+        width: 206px;
+        height: 206px;
+    }
+}
+
+.imagen_fondo2 {
+    background-image: url(./img/fondo2.gif);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+}
+
+.seleccionar-personaje{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+     height: auto;
+     margin: 0px;
+}
+
+
+
+.subtitulo {
+    align-items: center;
+    color: lightgray;
+    font-size: 20px;
+}
+
+#contenedor-personajes{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    margin-left: 25vw;
+}
+
+
+.personajes{
+    
+     width: 100px;
+     height: 50px;
+     margin: 30px 80px;
+     transition: all 300ms;
+
+}
+
+.personajes img {
+    width: 40vh;
+    height: auto;
+    display: inline-block;
+}
+
+input{
+    display: none;
+}
+
+.personajes img:hover{
+    cursor: pointer;
+    transform: scale(1.15);
+}
+@media screen {
+    
+}
+
+.agua img{
+    width: 15vh;
+    height: auto;
+    display: inline-block;
+}
+.agua img:hover{
+    cursor: pointer;
+}
+
+.fuego img{
+    width: 20vh;
+    height: auto;
+    display: inline-block;
+}
+.fuego img:hover{
+    cursor: pointer;
+}
+.granada img{
+    width: 20vh;
+    height: auto;
+    display: inline-block;
+}
+.granada img:hover{
+    cursor: pointer;
+}
+
+#img-jugador.move-left {
+    animation: moveLeftAnimation 0.5s ease;
+    transform: translateX(-500px); /* Ajusta la cantidad de desplazamiento aquí */
+}
+  
+@keyframes moveLeftAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-500px); /* Ajusta la cantidad de desplazamiento aquí */
+    }
+}
+  
+.contenedor-personajes--img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 650px;
+    margin-left: 100px;
+    max-width: 800px;
+    
+}
+
+.contenedor-personajes--img img {
+    width: auto;
+    height: 380px;
+    
+}
+  
+#img-jugador {
+    width: 200px;
+    height: auto;
+    margin-right: 40%; /* Ajusta el valor del margen según tus necesidades */
+}
+  
+#img-enemigo {
+    width: 200px;
+    height: auto;
+    transform: scaleX(-1);
+}
+
+#contenedor-jugador-vida{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 50px;
+ }
+ 
+ #contenedor-enemigo-vida{
+     display: flex;
+     flex-direction: column;
+     align-items: flex-end;
+     margin: 50px;
+ }
+
+ .vida-bar{
+    width: 200px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px gold;
+  }
+
+#vida-progreso-jugador{
+    display: block;
+    height: 100%;
+    background-color: #e24040;
+    width: 100%; /* Cambia este valor con JavaScript para representar el progreso */
+    border-radius: 5px;
+}
+
+#vida-progreso-enemigo{
+    display: block;
+    height: 100%;
+    background-color: #ff0000;
+    width: 100%; /* Cambia este valor con JavaScript para representar el progreso */
+    border-radius: 5px;
+  }
+
+
+  #contendedor-logo-ataque img{
+    position: fixed;
+  }
+
+  #contendedor-logo-ataque img{
+    height: auto;
+    width: 100px;
+  }
+
+  #contendedor-mensaje{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+    text-align: center;
+    position: relative;
+  }
+
+  .condenedor-barra{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 400px;
+    margin-top: -180px;
+  }
+
+  #contenedor-ataques{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+  }
+
+  #contendedor-mensaje{
+    background-color: purple;
+    padding: 5px;
+    border-radius: 3px;
+    width: 400px;
+    height: auto;
+    margin-left: 35vw;
+    margin-top: -200px;
+    position: fixed;
+    box-shadow: 4px 4px 4px rgb(124, 124, 10);
+  }
+
+  #contendedor-mensaje p{
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: azure;
+  }
+  #reiniciar{
+   margin-left: 46vw;
+  }
+  #boton-reiniciar {
+    border: none;
+    padding: 5px;
+    background-color: #622d2d;
+    font-family:'Playfair Display', serif ;
+    font-weight: 3px;
+    font-size: 20px;
+    color:  black;
+    width: auto;
+    height: 50px;
+    position: absolute;
+}
+#boton-reiniciar:hover {
+    cursor: pointer;
+    background-color: blueviolet;
+}
+.img-logo-final{
+    margin-top: -100px;
+    margin-left: -90px;
+    width: auto;
+    height: 550px;
+}

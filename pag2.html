@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="imagen_fondo2">
+<!-- Sección  -->
+        <section class="seleccionar-personaje">
+                   
+             <h2 class"img-jugado="subtitulo">Elige tu Personaje</h2>
+            
+             <div id="contenedor-personajes" class="personajes">
+                       
+            </div>
+        
+        </section>
+<!-- Sección lucha  -->
+
+
+        <section id="contenedor-lucha" >
+
+            <div class="condenedor-barra">
+                <div id="contenedor-jugador-vida">
+                    <div class="vida-bar"  >
+                        <span id="vida-progreso-jugador"></span>
+                    </div>
+                </div>
+    
+                <div id="contenedor-enemigo-vida">
+                    <div class="vida-bar">
+                        <span id="vida-progreso-enemigo"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor-personajes--img">
+            <figure id="img-jugador"></figure>
+            
+            <figure id="img-enemigo" class="enemigo"></figure>
+            </div> 
+            <div id="contendedor-logo-ataque"></div>
+
+            <div id="contendedor-mensaje">
+
+            </div>
+        
+        </section>
+
+        <section id="botones-ataques">
+            <div id="contenedor-ataques">
+                <div id="boton-agua" class="agua"><img src="img/agua.png" alt="agua"></div>
+                <div id="boton-fuego" class="fuego"><img src="img/fuego.png" alt="fuego"></div>
+                <div id="boton-granada" class="granada"><img src="img/granada.png" alt="granada"></div>
+            </div>
+        </section>
+        
+        <section id="reiniciar">
+            <button id="boton-reiniciar">REINICIAR</button>
+       </section>
+
+
+
+    </div>
+    <script src="game.js"></script> 
+</body>
+
+</html>
