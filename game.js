@@ -161,15 +161,22 @@ function luchaCondicion(ataqueJugador,ataqueEnemigo){
     
     if(ataqueJugador=="agua" && ataqueEnemigo=="agua" || ataqueJugador=="fuego" && ataqueEnemigo=="fuego" || ataqueJugador=="granada" && ataqueEnemigo=="granada"){
         return 10;
-    }else if(ataqueJugador=="granada" && ataqueEnemigo=="agua" || ataqueJugador=="agua" && ataqueEnemigo=="fuego" || ataqueJugador=="fuego" && ataqueEnemigo=="granada"){
-        return 20;
-    }else {
-        return  0;
-    }
-
-    
+    }else if(tipoataque==1){
+            if(ataqueJugador=="granada" && ataqueEnemigo=="agua" || 
+              ataqueJugador=="agua" && ataqueEnemigo=="fuego" || 
+              ataqueJugador=="fuego" && ataqueEnemigo=="granada"){
+                return 20;
+              }
+    }else if(tipoataque==2){
+        if(
+        ataqueJugador=="agua" && ataqueEnemigo=="granada" || 
+          ataqueJugador=="fuego" && ataqueEnemigo=="agua" || 
+          ataqueJugador=="granada" && ataqueEnemigo=="fuego") 
+                 return 20;
 }
-
+        return  0;
+}
+   
 
 function mensajeAtaque(vida){
   let img = `
