@@ -122,10 +122,10 @@ function lucha(){
 
 function ataquesPersonajes(e){
     const target = e.target
-    if(target.alt=="agua"){
-        ataqueJugador = "agua"
-    }else if (target.alt=="fuego"){
-        ataqueJugador= "fuego"
+    if(target.alt=="veneno"){
+        ataqueJugador = "veneno"
+    }else if (target.alt=="pistola"){
+        ataqueJugador= "pistola"
     }else{
         ataqueJugador="granada"
     }
@@ -159,19 +159,19 @@ function ataquesPersonajes(e){
 
 function luchaCondicion(ataqueJugador,ataqueEnemigo){
     
-    if(ataqueJugador=="agua" && ataqueEnemigo=="agua" || ataqueJugador=="fuego" && ataqueEnemigo=="fuego" || ataqueJugador=="granada" && ataqueEnemigo=="granada"){
+    if(ataqueJugador=="veneno" && ataqueEnemigo=="veneno" || ataqueJugador=="pistola" && ataqueEnemigo=="pistola" || ataqueJugador=="granada" && ataqueEnemigo=="granada"){
         return 10;
     }else if(tipoataque==1){
-            if(ataqueJugador=="granada" && ataqueEnemigo=="agua" || 
-              ataqueJugador=="agua" && ataqueEnemigo=="fuego" || 
-              ataqueJugador=="fuego" && ataqueEnemigo=="granada"){
+            if(ataqueJugador=="granada" && ataqueEnemigo=="veneno" || 
+              ataqueJugador=="veneno" && ataqueEnemigo=="pistola" || 
+              ataqueJugador=="pistola" && ataqueEnemigo=="granada"){
                 return 20;
               }
     }else if(tipoataque==2){
         if(
-        ataqueJugador=="agua" && ataqueEnemigo=="granada" || 
-          ataqueJugador=="fuego" && ataqueEnemigo=="agua" || 
-          ataqueJugador=="granada" && ataqueEnemigo=="fuego") 
+        ataqueJugador=="veneno" && ataqueEnemigo=="granada" || 
+          ataqueJugador=="pistola" && ataqueEnemigo=="veneno" || 
+          ataqueJugador=="granada" && ataqueEnemigo=="pistola") 
                  return 20;
 }
         return  0;
@@ -211,7 +211,7 @@ function mensajeFinal(){
 
 function ataqueAleatorio(){
     let num = aleatorio(1,3)
-    return (num==1)? "agua":(num==2)?"fuego":"granada";
+    return (num==1)? "veneno":(num==2)?"pistola":"granada";
 }
 
 function mostrarImagen(direccion, nombre) {
