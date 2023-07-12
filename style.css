@@ -139,23 +139,30 @@ input{
 @media screen {
     
 }
-
-.agua img{
+.veneno img{
     width: 15vh;
     height: auto;
     display: inline-block;
 }
-.agua img:hover{
+.veneno img:hover{
     cursor: pointer;
+    transform: scale(1.2);
+    opacity: 1.5;
+    filter: drop-shadow(5px 5px 5px #fff);
+    transition: 0.1s;
 }
 
-.fuego img{
+.pistola img{
     width: 20vh;
     height: auto;
     display: inline-block;
 }
-.fuego img:hover{
+.pistola img:hover{
     cursor: pointer;
+    transform: scale(1.2);
+    opacity: 1.5;
+    filter: drop-shadow(5px 5px 5px #fff);
+    transition: 0.1s;
 }
 .granada img{
     width: 20vh;
@@ -164,7 +171,12 @@ input{
 }
 .granada img:hover{
     cursor: pointer;
+    transform: scale(1.2);
+    opacity: 1.5;
+    filter: drop-shadow(5px 5px 5px #fff);
+    transition: 0.2s;
 }
+
 
 #img-jugador.move-left {
     animation: moveLeftAnimation 0.5s ease;
